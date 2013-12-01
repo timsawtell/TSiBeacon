@@ -66,6 +66,7 @@
             wholeString = [NSString stringWithFormat:@"%@\n%@", wholeString, @"You are 'Unknown Distance From' the beacon"];
             break;
     }
+    
     if (nil != [Model sharedModel].activeViewController) {
         [Model sharedModel].activeViewController.textView.text = wholeString;
     }

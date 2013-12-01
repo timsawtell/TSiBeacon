@@ -24,7 +24,7 @@
     Model *model = [NSKeyedUnarchiver unarchiveObjectWithFile: [Model savedDataPath]];
     if (!model) {
         model = [Model new];
-        model.beaconRegions = [NSMutableArray array];
+        model.beaconRegions = [NSArray array];
         return model;
     }
     return model;

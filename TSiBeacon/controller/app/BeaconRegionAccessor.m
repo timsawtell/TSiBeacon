@@ -14,20 +14,17 @@
                          withMajor:(NSInteger)major
                          withMinor:(NSInteger)minor
 {
-    __block TSBeaconRegion *foundRegion = nil;
-    [[Model sharedModel].beaconRegions enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-        TSBeaconRegion *region = (TSBeaconRegion *)obj;
+    for (TSBeaconRegion *region in [Model sharedModel].beaconRegions) {
         if ([region.beaconRegion.proximityUUID.UUIDString isEqualToString:uuid]) {
             if (region.beaconRegion.major.integerValue == major) {
                 if (region.beaconRegion.minor.integerValue == minor) {
-                    foundRegion = region;
-                    stop = (BOOL*)YES;
+                    return region;
                 }
             }
         }
-    }];
-    return foundRegion;
+    }
+    
+    return nil;
 }
 
 @end
