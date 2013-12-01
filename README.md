@@ -3,7 +3,7 @@ TSiBeacon
 
 Demo app to handle ranging iBeacons and handling getting near them.
 
-![TSiBeacon example image](http://i.imgur.com/I5DAHbK.jpg "TSiBeacon in action"
+![TSiBeacon example image](http://i.imgur.com/I5DAHbK.jpg "TSiBeacon in action")
 
 Setup
 =========
